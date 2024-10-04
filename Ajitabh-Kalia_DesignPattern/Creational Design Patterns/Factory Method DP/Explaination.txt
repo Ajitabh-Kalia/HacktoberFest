@@ -1,0 +1,9 @@
+Explanation:
+
+Notification Interface: Defines the common behavior (sendNotification) for all notifications.
+
+Concrete Notification Classes: Each notification type (Email, SMS, Push) has its own class that implements the sendNotification method with specific logic.
+
+Notification Factory: The factory method (createNotification) is responsible for creating the appropriate notification object based on the input.
+
+Client Code: The Main class demonstrates how the client interacts with the factory to get the notification type and send the message without worrying about the object creation details.

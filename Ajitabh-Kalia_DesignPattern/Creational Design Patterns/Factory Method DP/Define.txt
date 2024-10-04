@@ -1,0 +1,32 @@
+Factory Method Design Pattern: Definition
+
+
+The Factory Method Pattern is a creational design pattern that defines an interface or abstract class for creating an object, but allows subclasses or specific implementations to alter the type of objects that will be created. Instead of directly instantiating objects in client code (using new), the creation of objects is delegated to factory methods. This promotes loose coupling and makes the system more flexible and easier to maintain.
+
+Key Characteristics of Factory Method Pattern
+
+1. Encapsulation of Object Creation:
+The object creation logic is moved into a factory method, separating it from the client code. The client code only deals with the interface or abstract class, not specific classes, making it easier to change or extend.
+
+
+2. Loose Coupling:
+The client code does not need to know the specific classes or their constructors. It only interacts with a common interface or superclass. This makes the system easier to maintain and modify.
+
+
+3. Single Responsibility Principle (SRP):
+The Factory Method helps to maintain SRP by keeping object creation separate from the main logic of the application. The client focuses on using the objects, while the factory focuses on creating them.
+
+4. Open/Closed Principle (OCP):
+The Factory Method supports OCP by allowing new types of objects to be added (e.g., a new type of notification) without modifying the existing client code. You only need to extend the factory method or subclass it to create new objects.
+
+5. Subclassing to Customize Object Creation:
+In more advanced cases, factory methods can be abstract or reside in abstract classes. Subclasses then implement these factory methods to customize object creation. This makes the pattern extensible.
+
+6. Polymorphism:
+The pattern leverages polymorphism since the factory method returns objects of a common superclass or interface. The actual object type is determined at runtime, based on the implementation of the factory method.
+
+7. Delays Object Instantiation:
+The Factory Method delays the instantiation of objects until runtime, providing flexibility when it comes to determining what kind of object is needed.
+
+8. Avoids Conditional Logic:
+Instead of using multiple if-else or switch statements to instantiate different objects, the factory method provides a cleaner and more structured way to handle object creation based on conditions.
